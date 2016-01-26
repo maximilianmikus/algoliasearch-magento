@@ -70,8 +70,7 @@ class Algolia_Algoliasearch_Helper_Entity_Producthelper extends Algolia_Algolias
 
     public function getProductCollectionQuery($storeId, $productIds = null, $only_visible = true)
     {
-        /** @var $products Mage_Catalog_Model_Resource_Eav_Mysql4_Product_Collection */
-        $products = Mage::getResourceModel('catalog/product_collection');
+        $products = new Algolia_Algoliasearch_Model_Catalog_Collection();
 
         $products = $products->setStoreId($storeId)
                         ->addStoreFilter($storeId);
