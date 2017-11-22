@@ -286,6 +286,7 @@ $algoliaJsConfig = array(
         'searchBy' => $this->__('Search by'),
         'showMore' => $this->__('Show more products'),
     ),
+    'current_timestamp' => Mage::app()->getLocale()->storeDate()->getTimestamp(),
 );
 
 $transport = new Varien_Object($algoliaJsConfig);
